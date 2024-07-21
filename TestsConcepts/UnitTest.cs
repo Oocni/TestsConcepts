@@ -4,13 +4,16 @@ namespace TestsConcepts;
 
 public class UnitTest : IDisposable, IAsyncLifetime, IClassFixture<TestFixture>
 {
+    private readonly TestFixture _testFixture;
+
     /// <summary>
     /// Constructor is run before any test
     /// First code executed before test
     /// </summary>
-    public UnitTest()
+    public UnitTest(TestFixture testFixture)
     {
-        Debug.Print("UnitTest constructor");        
+        _testFixture = testFixture;
+        Debug.Print("UnitTest constructor");
     }
     
     /// <summary>
