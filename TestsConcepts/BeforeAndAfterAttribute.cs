@@ -12,8 +12,8 @@ public class BeforeAndAfterAttribute : BeforeAfterTestAttribute
 {
     /// <summary>
     /// Code to be run before the test is run
+    /// Third code executed before test
     /// </summary>
-    /// <param name="methodUnderTest"></param>
     public override void Before(MethodInfo methodUnderTest)
     {
         Debug.Print("BeforeAndAfterAttribute Before");
@@ -21,8 +21,8 @@ public class BeforeAndAfterAttribute : BeforeAfterTestAttribute
 
     /// <summary>
     /// Code to be run after the test is run
+    /// First code executed after test
     /// </summary>
-    /// <param name="methodUnderTest"></param>
     public override void After(MethodInfo methodUnderTest)
     {
         Debug.Print("BeforeAndAfterAttribute After");
